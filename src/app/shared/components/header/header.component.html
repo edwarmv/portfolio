@@ -1,0 +1,47 @@
+<header>
+  <article class="logo">
+    <ed-icon name="Logo"></ed-icon>
+    Edwar
+  </article>
+
+  <ed-burger-menu #burgerMenu></ed-burger-menu>
+</header>
+
+<menu [ngClass]="{ show: burgerMenu.burgerOpen }">
+  <li class="typography--headline4">
+    <a
+      routerLink=""
+      fragment="home"
+      (click)="burgerMenu.toggleBurger()"
+      routerLinkActive="active"
+      ><span>#</span>home</a
+    >
+  </li>
+  <li class="typography--headline4">
+    <a
+      routerLink=""
+      fragment="worsks"
+      (click)="burgerMenu.toggleBurger()"
+      routerLinkActive="active"
+      ><span>#</span>works</a
+    >
+  </li>
+  <li class="typography--headline4">
+    <a
+      routerLink=""
+      fragment="about-me"
+      (click)="burgerMenu.toggleBurger()"
+      routerLinkActive="active"
+      ><span>#</span>about-me</a
+    >
+  </li>
+  <li class="typography--headline4">
+    <a
+      routerLink=""
+      fragment="contacts"
+      (click)="burgerMenu.toggleBurger()"
+      routerLinkActive="active"
+      ><span>#</span>contacts</a
+    >
+  </li>
+</menu>

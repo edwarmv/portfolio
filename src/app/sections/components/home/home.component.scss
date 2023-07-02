@@ -1,0 +1,60 @@
+:host {
+  display: grid;
+  row-gap: 24px;
+
+  & > p:nth-child(2) {
+    color: var(--color-on-surface-variant);
+  }
+}
+
+.highlight {
+  color: var(--color-primary);
+}
+
+.profile-img {
+  justify-self: center;
+  width: 340px;
+  position: relative;
+  display: grid;
+
+  ed-logo {
+    position: absolute;
+    top: 80px;
+    z-index: -1;
+    width: 104px;
+    height: 104px;
+    color: var(--color-primary);
+  }
+
+  .image {
+    height: 380px;
+    width: auto;
+    justify-self: center;
+  }
+
+  .dots {
+    position: absolute;
+    width: 56px;
+    height: auto;
+    bottom: 100px;
+    right: 0;
+  }
+
+  .status {
+    border: 1px solid var(--color-on-surface-variant);
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .indicator {
+      width: 16px;
+      height: 16px;
+      background-color: var(--color-primary);
+    }
+
+    div > p:first-child {
+      color: var(--color-on-surface-variant);
+    }
+  }
+}

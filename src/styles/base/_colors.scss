@@ -1,0 +1,17 @@
+$color-primary-dark: #c778dd;
+$color-on-primary-dark: #c778dd;
+$color-sencondary-dark: #abb2bf;
+$color-on-sencondary-dark: #abb2bf;
+$color-surface-dark: #282c33;
+$color-on-surface-dark: #ffffff;
+$color-on-surface-variant-dark: #abb2bf;
+
+@mixin dark() {
+  --color-primary: #{$color-primary-dark};
+  --color-on-primary: #{$color-on-primary-dark};
+  --color-sencondary: #{$color-sencondary-dark};
+  --color-on-sencondary: #{$color-on-sencondary-dark};
+  --color-surface: #{$color-surface-dark};
+  --color-on-surface: #{$color-on-surface-dark};
+  --color-on-surface-variant: #{$color-on-surface-variant-dark};
+}

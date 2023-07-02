@@ -1,0 +1,24 @@
+@use "base";
+@use "base/colors";
+@use "components";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+
+  &.dark {
+    @include colors.dark();
+  }
+}

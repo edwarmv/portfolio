@@ -1,0 +1,30 @@
+:host {
+  border: 1px solid var(--color-on-surface-variant);
+  display: grid;
+  width: 330px;
+}
+
+.thumbnail {
+  width: 100%;
+  height: auto;
+}
+
+.tags {
+  padding: 8px;
+  border-bottom: 1px solid var(--color-on-surface-variant);
+}
+
+.content {
+  padding: 16px;
+  display: grid;
+  row-gap: 16px;
+
+  &__description {
+    color: var(--color-on-surface-variant);
+  }
+
+  &__actions {
+    display: flex;
+    column-gap: 16px;
+  }
+}

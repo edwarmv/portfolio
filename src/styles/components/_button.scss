@@ -1,0 +1,11 @@
+.ed-button {
+  background: transparent;
+  color: var(--color-on-surface);
+  border: none;
+  padding: 8px 16px;
+  text-decoration: none;
+
+  &--stroked {
+    border: 1px solid var(--color-primary);
+  }
+}
