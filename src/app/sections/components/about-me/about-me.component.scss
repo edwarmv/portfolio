@@ -1,0 +1,44 @@
+:host {
+  display: grid;
+}
+
+.description {
+  display: grid;
+  grid-template-rows: auto;
+  row-gap: 2em;
+  color: var(--color-on-surface-variant);
+  margin-bottom: 90px;
+  button {
+    justify-self: flex-start;
+  }
+}
+
+figure {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  .img-wrapper {
+    display: grid;
+    justify-items: center;
+    img {
+      width: 343px;
+      height: auto;
+    }
+    &__line {
+      height: 1px;
+      width: 80%;
+      background-color: var(--color-primary);
+    }
+  }
+  ed-figure-matrix {
+    position: absolute;
+    &:nth-of-type(1) {
+      top: 10%;
+      left: 0;
+    }
+    &:nth-of-type(2) {
+      right: 0;
+      top: 50%;
+    }
+  }
+}
