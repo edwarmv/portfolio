@@ -2,14 +2,14 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'ed-logo',
+  selector: 'ed-logo-icon',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './logo.component.svg',
-  styleUrls: ['./logo.component.scss'],
+  templateUrl: './logo-icon.component.svg',
+  styleUrls: ['./logo-icon.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class LogoComponent {
+export class LogoIconComponent {
   @Input()
   strokeWidth = '3px';
 
