@@ -1,0 +1,16 @@
+:host {
+  display: inline-flex;
+  column-gap: 9px;
+  align-items: center;
+}
+
+ed-logo-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.label {
+  &--bold {
+    font-weight: 700;
+  }
+}
