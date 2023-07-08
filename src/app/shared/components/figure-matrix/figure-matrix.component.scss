@@ -1,0 +1,16 @@
+.matrix {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  &__row {
+    display: flex;
+    column-gap: 16px;
+  }
+  &__figure {
+    display: inline-block;
+    height: 4px;
+    width: 4px;
+    border-radius: 50%;
+    background-color: var(--color-on-surface-variant);
+  }
+}
