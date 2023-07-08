@@ -1,19 +1,17 @@
-<img
-  class="thumbnail"
-  src="assets/image/project-thumbnail.jpg"
-  alt="thumbnail"
-/>
+<img *ngIf="imgSrc" class="thumbnail" [src]="imgSrc" alt="thumbnail" />
 
-<p class="tags">HTML CSS Python Flask</p>
+<p class="tags" *ngIf="tags.length > 0">{{ tags.join(" ") }}</p>
+
+<p class="alt-title" *ngIf="altTitle">{{ altTitle }}</p>
 
 <div class="content">
-  <h5 class="typography--headline5">ChertNodes</h5>
+  <h5 class="typography--headline5" *ngIf="title">{{ title }}</h5>
 
-  <p class="content__description">Minecraft servers hosting</p>
+  <p class="content__description">{{ description }}</p>
 
-  <div class="content__actions">
-    <button edButton btnStyle="stroked">Live <~></button>
-
-    <button edButton btnStyle="stroked">Cached >=</button>
+  <div class="content__actions" *ngIf="actions.length > 0">
+    <button edButton btnStyle="stroked" *ngFor="let action of actions">
+      {{ action.label }}
+    </button>
   </div>
 </div>

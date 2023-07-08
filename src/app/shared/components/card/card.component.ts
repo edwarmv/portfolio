@@ -1,6 +1,10 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from '../button/button.component';
+
+type CardAction = {
+  label: string
+}
 
 @Component({
   selector: 'ed-card',
@@ -11,5 +15,21 @@ import { ButtonComponent } from '../button/button.component';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CardComponent {
+  @Input()
+  imgSrc = '';
 
+  @Input()
+  tags: string[] = [];
+
+  @Input()
+  title = '';
+
+  @Input()
+  altTitle = '';
+
+  @Input()
+  description = '';
+
+  @Input()
+  actions: CardAction[] = [];
 }
