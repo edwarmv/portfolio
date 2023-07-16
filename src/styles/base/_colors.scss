@@ -1,4 +1,5 @@
 $color-primary-dark: #c778dd;
+$color-primary-dark-rgb: 199, 120, 221;
 $color-on-primary-dark: #c778dd;
 $color-sencondary-dark: #abb2bf;
 $color-on-sencondary-dark: #abb2bf;
@@ -8,6 +9,7 @@ $color-on-surface-variant-dark: #abb2bf;
 
 @mixin dark() {
   --color-primary: #{$color-primary-dark};
+  --color-primary-rgb: #{$color-primary-dark-rgb};
   --color-on-primary: #{$color-on-primary-dark};
   --color-sencondary: #{$color-sencondary-dark};
   --color-on-sencondary: #{$color-on-sencondary-dark};
