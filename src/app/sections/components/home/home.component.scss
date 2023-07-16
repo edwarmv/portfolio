@@ -32,10 +32,8 @@
     justify-self: center;
   }
 
-  .dots {
+  ed-figure-matrix {
     position: absolute;
-    width: 56px;
-    height: auto;
     bottom: 100px;
     right: 0;
   }
@@ -44,6 +42,7 @@
     border: 1px solid var(--color-on-surface-variant);
     padding: 8px;
     display: flex;
+    flex-flow: row wrap;
     align-items: center;
     gap: 8px;
 
@@ -53,8 +52,53 @@
       background-color: var(--color-primary);
     }
 
-    div > p:first-child {
+    span {
       color: var(--color-on-surface-variant);
+      white-space: nowrap;
+    }
+
+    &__link {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      ed-icon {
+        height: 16px;
+      }
+    }
+  }
+}
+
+.quote {
+  display: grid;
+  .quote-left {
+    position: absolute;
+    height: 20px;
+    background-color: var(--color-surface);
+    top: -10px;
+    left: 10px;
+  }
+  .quote-right {
+    position: absolute;
+    height: 20px;
+    background-color: var(--color-surface);
+    bottom: -10px;
+    right: 10px;
+  }
+  div {
+    &:nth-of-type(1) {
+      position: relative;
+      border: 1px solid var(--color-on-surface-variant);
+      padding: 32px;
+    }
+    &:nth-of-type(2) {
+      justify-self: flex-end;
+      span {
+        display: inline-block;
+        padding: 16px;
+        border-width: 0 1px 1px 1px;
+        border-color: var(--color-on-surface-variant);
+        border-style: solid;
+      }
     }
   }
 }

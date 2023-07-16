@@ -1,23 +1,50 @@
 <p class="typography--headline4">
-  Edwar is a <span class="highlight">web designer</span> and
-  <span class="highlight">front-end developer</span>
+  Hi, My name is Edwar and I'm a
+  <span class="highlight">web full stack developer</span>
 </p>
 
-<p>He crafts resposive websites where technologies meet creativity</p>
+<p>
+  I am thrilled to share with you my journey as a programmer and showcase the
+  projects I have worked on. Throughout this portfolio, you will find a
+  collection of my coding projects, demonstrating my skills, creativity, and
+  problem-solving abilities.
+</p>
+
+<div>
+  <a edButton btnStyle="stroked" routerLink="" fragment="contacts"
+    >Contact me</a
+  >
+</div>
 
 <figure class="profile-img">
   <ed-logo-icon></ed-logo-icon>
 
   <img class="image" src="assets/image/profile.png" alt="profile" />
 
-  <img class="dots" src="assets/image/dots-5x5.png" alt="dots-5x5">
+  <ed-figure-matrix class="dots" [rows]="5" [columns]="5"></ed-figure-matrix>
 
   <article class="status">
     <div class="indicator"></div>
-
-    <div>
-      <p>Currently working on</p>
-      <p>Portfolio</p>
-    </div>
+    <span>Currently working at</span>
+    <a
+      class="status__link"
+      edButton
+      href="https://bupunku.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Bupunku <ed-icon name="Link" />
+    </a>
   </article>
 </figure>
+
+<div class="quote">
+  <div>
+    <ed-icon name="QuoteLeft" class="quote-left" />
+    <ed-icon name="QuoteRight" class="quote-right" />
+    Code is like humor. When you have to explain it, it's bad.
+  </div>
+  <div>
+    <span>- Cory House</span>
+  </div>
+</div>
