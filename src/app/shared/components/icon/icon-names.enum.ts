@@ -4,4 +4,7 @@ export enum IconName {
   Envelope = 'envelope',
   Github = 'github',
   MapMarker = 'map-marker',
+  Link = 'link',
+  QuoteRight = 'quote-right',
+  QuoteLeft = 'quote-left',
 }
