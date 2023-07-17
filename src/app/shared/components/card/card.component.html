@@ -1,17 +1,55 @@
-<img *ngIf="imgSrc" class="thumbnail" [src]="imgSrc" alt="thumbnail" />
+<img
+  *ngIf="imgSrc"
+  class="thumbnail"
+  [src]="imgSrc"
+  alt="thumbnail"
+/>
 
-<p class="tags" *ngIf="tags.length > 0">{{ tags.join(" ") }}</p>
+<p
+  class="tags"
+  *ngIf="tags && tags.length > 0"
+>
+  {{ tags.join(" ") }}
+</p>
 
-<p class="alt-title" *ngIf="altTitle">{{ altTitle }}</p>
+<p
+  class="alt-title"
+  *ngIf="altTitle"
+>
+  {{ altTitle }}
+</p>
 
 <div class="content">
-  <h5 class="typography--headline5" *ngIf="title">{{ title }}</h5>
+  <h5
+    class="typography--headline5"
+    *ngIf="title"
+  >
+    {{ title }}
+  </h5>
 
   <p class="content__description">{{ description }}</p>
 
-  <div class="content__actions" *ngIf="actions.length > 0">
-    <button edButton btnStyle="stroked" *ngFor="let action of actions">
-      {{ action.label }}
-    </button>
+  <div
+    class="content__actions"
+    *ngIf="actions && actions.length > 0"
+  >
+    <a
+      edButton
+      btnStyle="stroked"
+      *ngFor="let action of actions"
+      [href]="action.url"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <ng-container [ngSwitch]="action.label">
+        <ng-container *ngSwitchCase="'live'">Live <~></ng-container>
+        <ng-container *ngSwitchCase="'github'"
+          >Repo <ed-icon name="Github"
+        /></ng-container>
+        <ng-container *ngSwitchDefault>
+          {{ action.customLabel }}
+        </ng-container>
+      </ng-container>
+    </a>
   </div>
 </div>

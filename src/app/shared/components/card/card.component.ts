@@ -1,35 +1,33 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from '../button/button.component';
-
-type CardAction = {
-  label: string
-}
+import { IconComponent } from '../icon/icon.component';
+import { Card, CardAction } from './card.interface';
 
 @Component({
   selector: 'ed-card',
   standalone: true,
-  imports: [CommonModule, ButtonComponent],
+  imports: [CommonModule, ButtonComponent, IconComponent],
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CardComponent {
+export class CardComponent implements Card {
   @Input()
-  imgSrc = '';
+  imgSrc?: string;
 
   @Input()
-  tags: string[] = [];
+  tags?: string[];
 
   @Input()
-  title = '';
+  title?: string;
 
   @Input()
-  altTitle = '';
+  altTitle?: string;
 
   @Input()
-  description = '';
+  description?:string;
 
   @Input()
-  actions: CardAction[] = [];
+  actions?: CardAction[];
 }

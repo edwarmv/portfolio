@@ -7,6 +7,7 @@
 .thumbnail {
   width: 100%;
   height: auto;
+  border-bottom: 1px solid var(--color-on-surface-variant);
 }
 
 .tags, .alt-title {
