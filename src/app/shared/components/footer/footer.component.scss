@@ -15,10 +15,12 @@
   display: grid;
   row-gap: 16px;
   p:first-child {
-    display: grid;
-    row-gap: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
     span {
       color: var(--color-on-surface-variant);
+      word-break: break-all;
     }
   }
 }
