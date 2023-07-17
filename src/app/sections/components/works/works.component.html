@@ -6,10 +6,11 @@
 
 <section class="cards">
   <ed-card
-    imgSrc="assets/image/project-thumbnail.jpg"
-    [tags]="['HTML', 'CSS', 'Python', 'Flask']"
-    title="ChertNodes"
-    description="Minecraft servers hosting"
-    [actions]="[{ label: 'Live <~>' }, { label: 'Cached >=' }]"
+    *ngFor="let card of cards"
+    [imgSrc]="card.imgSrc"
+    [tags]="card.tags"
+    [title]="card.title"
+    [description]="card.description"
+    [actions]="card.actions"
   ></ed-card>
 </section>
