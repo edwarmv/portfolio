@@ -7,4 +7,5 @@ export enum IconName {
   Link = 'link',
   QuoteRight = 'quote-right',
   QuoteLeft = 'quote-left',
+  Discord = 'discord',
 }
