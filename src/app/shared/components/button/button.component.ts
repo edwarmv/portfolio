@@ -14,7 +14,7 @@ import { CommonModule } from '@angular/common';
 })
 export class ButtonComponent {
   @Input()
-  btnStyle: 'basic' | 'stroked' = 'basic';
+  btnStyle: 'basic' | 'stroked' | 'fab' = 'basic';
 
   @HostBinding('class.ed-button--basic')
   get basicStyle() {
@@ -24,5 +24,10 @@ export class ButtonComponent {
   @HostBinding('class.ed-button--stroked')
   get strokedStyle() {
     return this.btnStyle === 'stroked';
+  }
+
+  @HostBinding('class.ed-button--fab')
+  get fabStyle() {
+    return this.btnStyle === 'fab';
   }
 }
