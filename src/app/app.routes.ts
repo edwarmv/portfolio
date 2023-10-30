@@ -6,4 +6,11 @@ export const routes: Route[] = [
     loadComponent: () =>
       import('./pages/main/main.component').then((c) => c.MainComponent),
   },
+  {
+    path: 'projects',
+    loadComponent: () =>
+      import('./pages/projects/projects.component').then(
+        (c) => c.ProjectsComponent,
+      ),
+  },
 ];

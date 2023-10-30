@@ -1,18 +1,18 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CardComponent } from 'src/app/shared/components/card/card.component';
-import { TitleComponent } from 'src/app/shared/components/title/title.component';
+import { CardComponent } from '@shared/components/card/card.component';
+import { TitleComponent } from '@shared/components/title/title.component';
+import { CARDS } from './projects.cards';
 import { Card } from '@shared/components/card/card.interface';
-import { CARDS } from './works.cards';
 
 @Component({
-  selector: 'ed-works',
+  selector: 'ed-projects',
   standalone: true,
   imports: [CommonModule, CardComponent, TitleComponent],
-  templateUrl: './works.component.html',
-  styleUrls: ['./works.component.scss'],
+  templateUrl: './projects.component.html',
+  styleUrls: ['./projects.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class WorksComponent {
+export class ProjectsComponent {
   cards: Card[] = CARDS;
 }
