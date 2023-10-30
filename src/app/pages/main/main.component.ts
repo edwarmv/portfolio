@@ -17,13 +17,8 @@ import { CommonModule } from '@angular/common';
     ContactsComponent,
     SkillsComponent,
   ],
-  host: {
-    class: "header--adjust"
-  },
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MainComponent {
-
-}
+export class MainComponent {}
