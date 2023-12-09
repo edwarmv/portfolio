@@ -1,11 +1,12 @@
 :host {
   display: grid;
   justify-content: center;
+  grid-template-columns: 1fr;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 main {
-  max-width: 1024px;
-
   padding: {
     left: 16px;
     right: 16px;
