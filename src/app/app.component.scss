@@ -1,4 +1,11 @@
+:host {
+  display: grid;
+  justify-content: center;
+}
+
 main {
+  max-width: 1024px;
+
   padding: {
     left: 16px;
     right: 16px;
