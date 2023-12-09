@@ -1,14 +1,48 @@
 <header>
   <ed-logo routerLink="/"></ed-logo>
-  <ed-burger-menu #burgerMenu></ed-burger-menu>
+  <menu *edMediaQuery="mediaQueries.desktop">
+    <li class="typography--body1">
+      <a
+        routerLink=""
+        fragment="home"
+        routerLinkActive="active"
+        ><span>#</span>home</a
+      >
+    </li>
+    <li class="typography--body1">
+      <a
+        routerLink=""
+        fragment="works"
+        routerLinkActive="active"
+        ><span>#</span>works</a
+      >
+    </li>
+    <li class="typography--body1">
+      <a
+        routerLink=""
+        fragment="about-me"
+        routerLinkActive="active"
+        ><span>#</span>about-me</a
+      >
+    </li>
+    <li class="typography--body1">
+      <a
+        routerLink=""
+        fragment="contacts"
+        routerLinkActive="active"
+        ><span>#</span>contacts</a
+      >
+    </li>
+  </menu>
+  <ed-burger-menu *edMediaQuery="mediaQueries.mobile"></ed-burger-menu>
 </header>
 
-<menu [ngClass]="{ show: burgerMenu.burgerOpen }">
+<menu [ngClass]="{ show: burgerMenu?.burgerOpen }">
   <li class="typography--headline4">
     <a
       routerLink=""
       fragment="home"
-      (click)="burgerMenu.toggleBurger()"
+      (click)="burgerMenu?.toggleBurger()"
       routerLinkActive="active"
       ><span>#</span>home</a
     >
@@ -17,7 +51,7 @@
     <a
       routerLink=""
       fragment="works"
-      (click)="burgerMenu.toggleBurger()"
+      (click)="burgerMenu?.toggleBurger()"
       routerLinkActive="active"
       ><span>#</span>works</a
     >
@@ -26,7 +60,7 @@
     <a
       routerLink=""
       fragment="about-me"
-      (click)="burgerMenu.toggleBurger()"
+      (click)="burgerMenu?.toggleBurger()"
       routerLinkActive="active"
       ><span>#</span>about-me</a
     >
@@ -35,7 +69,7 @@
     <a
       routerLink=""
       fragment="contacts"
-      (click)="burgerMenu.toggleBurger()"
+      (click)="burgerMenu?.toggleBurger()"
       routerLinkActive="active"
       ><span>#</span>contacts</a
     >

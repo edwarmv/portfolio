@@ -1,15 +1,21 @@
 import {
+  AfterViewInit,
   ChangeDetectionStrategy,
   Component,
   ElementRef,
   HostBinding,
   HostListener,
+  ViewChild,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IconComponent } from '../icon/icon.component';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { BurgerMenuComponent } from '../burger-menu/burger-menu.component';
 import { LogoComponent } from '../logo/logo.component';
+import {
+  MEDIA_QUERIES,
+  MediaQueryDirective,
+} from '@shared/directives/media-query.directive';
 
 @Component({
   selector: 'ed-header',
@@ -21,6 +27,7 @@ import { LogoComponent } from '../logo/logo.component';
     IconComponent,
     BurgerMenuComponent,
     LogoComponent,
+    MediaQueryDirective,
   ],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
@@ -30,7 +37,9 @@ export class HeaderComponent {
   scrollOffsetToHideHeader = 40;
   currentTimeoutId: ReturnType<typeof setTimeout> | null = null;
   lastScrollY = 0;
-
+  mediaQueries = MEDIA_QUERIES;
+  @ViewChild(BurgerMenuComponent)
+  burgerMenu: BurgerMenuComponent | undefined;
   @HostBinding('style.top')
   top = '0';
 
